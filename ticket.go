@@ -10,6 +10,7 @@
 Формат выходных данных
 Выведите "YES", если билет счастливый, в противном случае - "NO".
 */
+
 package main
 
 import "fmt"
@@ -27,7 +28,7 @@ func main() {
 	fmt.Scan(&input)
 
 	right := ((input % Thousand) / OneHundred) + ((input % Thousand) % OneHundred / Ten) + ((input % Thousand % OneHundred) % Ten)
-	left := ((input / TenThousand	) / Ten) + ((input / TenThousand	) % Ten) + ((input / Thousand) % Ten) 
+	left := ((input / TenThousand) / Ten) + ((input / TenThousand) % Ten) + ((input / Thousand) % Ten) 
 
 	if left == right{
 		fmt.Println("YES")
